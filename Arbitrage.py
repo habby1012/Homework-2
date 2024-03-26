@@ -11,6 +11,7 @@ liquidity = {
     ("tokenD", "tokenE"): (60, 25),
 }
 
+
 def exchange(amount, pair):
     if pair in liquidity:
         reserve_src, reserve_dest = liquidity[pair]
