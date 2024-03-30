@@ -19,7 +19,7 @@ def exchange(amount, pair):
         pair = (pair[1], pair[0])
         reserve_dest, reserve_src = liquidity[pair]
 
-    amount_out = (amount * reserve_dest) / (reserve_src + amount) * 0.997
+    amount_out = ((amount * 0.997) * reserve_dest) / (reserve_src + (amount * 0.997))
     return amount_out
 
 def find_profitable_path(start_token, current_token, amount, path, visited):
