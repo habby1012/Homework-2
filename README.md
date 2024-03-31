@@ -6,9 +6,7 @@ Please complete the report problem below:
 Provide your profitable path, the amountIn, amountOut value for each swap, and your final reward (your tokenB balance).
 
 >這題原輸出只有第一行，為了顯示各個swap的過程，我多print出了下面四行。
-![image](https://hackmd.io/_uploads/rygM3jpSyR.png)
-
-
+<img width="603" alt="image" src="https://github.com/habby1012/Homework-2/assets/80194639/892ded36-29d9-43eb-b71d-1851bd8274a3">
 
 
 
@@ -18,7 +16,8 @@ What is slippage in AMM, and how does Uniswap V2 address this issue? Please illu
 > 當某個token y被交易者不斷買入時，y會相對於x變少很多，導致價格迅速上漲，這就是slippage。
 > 以下舉[Uniswap](https://github.com/Uniswap/v2-periphery/blob/master/contracts/UniswapV2Router02.sol)裡面的function當作例子。
 > 
-> ![image](https://hackmd.io/_uploads/HyWlw881R.png)
+> <img width="625" alt="image" src="https://github.com/habby1012/Homework-2/assets/80194639/38351436-6c07-471e-8dc0-a62b38aeb51e">
+>
 > 可以看到require那一行，根據計算出的輸出數量，檢查最終輸出數量是否滿足用戶設定的amountOutMin。如果不滿足，交易就會失敗，這保護了交易者不會因slippage太大而損失過多。
 
 ## Problem 3
